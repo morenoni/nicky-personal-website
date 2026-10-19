@@ -1,4 +1,4 @@
-// Projects shown on the Projects tab. See js/cards.js for what each field does.
+// Projects shown on the Projects tab. See components/Card.jsx for what each field does.
 export const PROJECTS = [
 	{
 		title: 'Scamper IDE Accessibility',
