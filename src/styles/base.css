@@ -49,6 +49,5 @@ main:focus { outline: none; }   /* skip-link target, not an interactive control 
 }
 .skip-link:focus { top: .75rem; outline-color: var(--white); box-shadow: 0 0 0 6px var(--navy); }
 
-/* Icon sprite lives in the page but takes up no space */
-.sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+/* Icons take on the text color of whatever they sit in */
 .icon { fill: currentColor; flex: none; }
