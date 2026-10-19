@@ -1,0 +1,11 @@
+/* Education box: full width, light gray, under the bio. */
+
+.education {
+	margin-top: 1.5rem;
+	padding: .9rem 1.25rem;
+	background: var(--gray-tint);
+	border-radius: var(--radius);
+}
+.education h2 { font-size: 1.2rem; }
+.education p { margin-bottom: .4rem; }
+.education p:last-child { margin-bottom: 0; }
