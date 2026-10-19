@@ -1,0 +1,81 @@
+/* Navy bar across the top: the site name, the tab bar, and the collapsed (menu button) layout. */
+
+.topbar,
+.topbar-ruler {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: .5rem 1.5rem;
+	padding: .9rem 2rem;
+	background: var(--navy);
+}
+.topbar { position: relative; }
+
+.brand {
+	color: var(--white);
+	font-weight: 700;
+	font-size: 1.15rem;
+	text-decoration: none;
+}
+.brand:focus-visible { outline-color: var(--white); }
+
+/* ---------- Tabs ---------- */
+
+.tabs { display: flex; flex-wrap: nowrap; gap: .25rem; }
+
+.tabs button,
+.tab-ghost {
+	font: inherit;
+	color: var(--white);
+	background: transparent;
+	border: 0;
+	border-bottom: 3px solid transparent;
+	padding: .4rem .9rem;
+}
+.tabs button { cursor: pointer; }
+.tabs button:hover { border-bottom-color: var(--on-navy-hover); }
+.tabs button[aria-selected="true"],
+.tab-ghost.is-active { font-weight: 700; }
+.tabs button[aria-selected="true"] { border-bottom-color: var(--white); }
+.tabs button:focus-visible { outline-color: var(--white); }
+
+/* ---------- Menu button (only shown when the bar is collapsed) ---------- */
+
+.menu-toggle {
+	display: none;
+	color: var(--white);
+	background: transparent;
+	border: 0;
+	padding: .35rem;
+	cursor: pointer;
+}
+.menu-toggle .icon { width: 1.7rem; height: 1.7rem; display: block; }
+.menu-toggle:focus-visible { outline-color: var(--white); }
+
+/* ---------- Collapsed bar ----------
+   TopBar.jsx adds .compact whenever the tabs do not fit on one line. */
+
+.topbar.compact { padding: .75rem 3.25rem; justify-content: center; text-align: center; }
+.topbar.compact .brand { font-size: 1rem; }
+.topbar.compact .menu-toggle { display: block; position: absolute; top: .55rem; right: .6rem; }
+.topbar.compact nav { display: none; width: 100%; }
+.topbar.compact.menu-open nav { display: block; }
+.topbar.compact .tabs { flex-direction: column; gap: 0; border-top: 1px solid var(--on-navy-border); }
+.topbar.compact .tabs button { text-align: center; padding: .7rem .9rem; border-bottom: 1px solid var(--on-navy-divider); }
+.topbar.compact .tabs button[aria-selected="true"] { background: var(--on-navy-active); }
+
+/* ---------- Invisible ruler ----------
+   An unseen, full-size copy of the bar that is never collapsed. useCompactBar measures it
+   to learn whether the tabs would fit on one line. */
+
+.topbar-ruler {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 0;
+	overflow: hidden;
+	visibility: hidden;
+	pointer-events: none;
+}
