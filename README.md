@@ -4,7 +4,7 @@ My personal website: who I am, my research, experience, projects, and honors. I'
 
 ## What it is
 
-A single-page site with tabs (About, Research, Experience, Projects, Honors) in a navy blue theme. It's built with plain HTML, CSS, and JavaScript, with no frameworks and no build step.
+A single-page site with tabs (About, Research, Experience, Projects, Honors) in a navy blue theme. It's built with React and Vite, and published with GitHub Pages.
 
 ## Accessibility
 
@@ -18,14 +18,16 @@ Since accessibility is my research area, I built the site to follow WCAG 2.2 AA:
 ## Running it locally
 
 ```bash
-python3 -m http.server 8000
+npm install
+npm run dev
 ```
 
-Then open http://localhost:8000. It needs a local server because the scripts are ES modules.
+Then open the address Vite prints (http://localhost:5173). `npm run build` makes the production version in `dist/`.
 
 ## Layout
 
-- `index.html`: page structure and the About text
-- `css/`: one small stylesheet per part of the page
-- `js/`: one small module per behavior, with the page content in `js/data/`
-- `images/`: photos
+- `src/components/`: small reusable pieces (top bar, tabs, cards, icons)
+- `src/panels/`: the content of each tab
+- `src/data/`: the text content (news, papers, jobs, projects, awards)
+- `src/hooks/`: the logic for the collapsing menu, tab selection, and the news scroll hint
+- `src/styles/`: the theme and page-wide styles
