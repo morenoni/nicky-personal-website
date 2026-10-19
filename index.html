@@ -13,6 +13,8 @@
 	<link rel="stylesheet" href="css/about.css">
 	<link rel="stylesheet" href="css/education.css">
 	<link rel="stylesheet" href="css/news.css">
+	<link rel="stylesheet" href="css/cards.css">
+	<link rel="stylesheet" href="css/badges.css">
 	<script type="module" src="js/main.js"></script>
 </head>
 <body>
@@ -23,6 +25,8 @@
 		<symbol id="i-mail" viewBox="0 0 24 24"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm1.6 2L12 12.6 19.4 7H4.6ZM4 8.9V17h16V8.9l-8 6-8-6Z"/></symbol>
 		<symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4V21H3V9.75Zm6.5 0h3.8v1.54h.05c.53-1 1.82-2.04 3.75-2.04 4 0 4.75 2.63 4.75 6.05V21h-4v-5.07c0-1.2-.02-2.76-1.68-2.76-1.69 0-1.95 1.32-1.95 2.67V21h-4V9.75Z"/></symbol>
 		<symbol id="i-github" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.9.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0 1 12 6.8c.85 0 1.7.11 2.5.34 1.9-1.29 2.74-1.02 2.74-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></symbol>
+		<symbol id="i-paper" viewBox="0 0 24 24"><path d="M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm7 1.5V9h5.5L13 3.5ZM7 13h10v1.5H7V13Zm0 3.5h10V18H7v-1.5Zm0-7h4V11H7V9.5Z"/></symbol>
+		<symbol id="i-poster" viewBox="0 0 24 24"><path d="M3 3h18v2h-8v2h6a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1h-5.4l2.9 4h-2.4L12 18.4 9.9 21H7.5l2.9-4H5a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h6V5H3V3Zm3 6v7h12V9H6Zm2 4h3v2H8v-2Zm0-3h6v2H8v-2Zm5 3h3v2h-3v-2Z"/></symbol>
 	</svg>
 
 	<!-- Lets keyboard users jump past the top bar -->
@@ -40,6 +44,7 @@
 		<nav aria-label="Main">
 			<div class="tabs" id="tabs" role="tablist" aria-label="Site sections">
 				<button type="button" role="tab" id="tab-about" aria-controls="about" aria-selected="true">About</button>
+				<button type="button" role="tab" id="tab-research" aria-controls="research" aria-selected="false" tabindex="-1">Research</button>
 			</div>
 		</nav>
 	</header>
@@ -87,6 +92,13 @@
 					<ul id="news-list"></ul>
 				</div>
 			</div>
+		</section>
+
+		<!-- RESEARCH: the cards come from js/data/research.js -->
+		<section class="panel" id="research" role="tabpanel" aria-labelledby="tab-research" tabindex="0" hidden>
+			<h2>Research</h2>
+			<p class="lead">I work on making programming tools and learning experiences accessible from the start, especially for blind, low-vision, and neurodiverse students. Three papers from the Glimmer Lab appeared at SIGCSE TS 2026.</p>
+			<div class="cards" data-cards="research"></div>
 		</section>
 	</main>
 

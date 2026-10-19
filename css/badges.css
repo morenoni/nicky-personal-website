@@ -1,0 +1,17 @@
+/* The small "Paper" and "Poster" badges on cards (built in js/cards.js). */
+
+.badges { display: flex; flex-wrap: wrap; gap: .4rem; list-style: none; margin: 0; padding: 0; }
+
+.badge {
+	display: inline-flex;
+	align-items: center;
+	gap: .3rem;
+	padding: .1rem .6rem;
+	border-radius: 999px;
+	background: var(--navy-tint);
+	border: 1px solid var(--navy-line);
+	color: var(--navy);
+	font-size: .8rem;
+	font-weight: 700;
+}
+.badge .icon { width: .95rem; height: .95rem; }

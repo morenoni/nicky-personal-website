@@ -1,0 +1,22 @@
+/* Stacked cards used by the Research, Experience, Projects and Honors tabs. */
+
+.cards { display: flex; flex-direction: column; gap: 1rem; }
+
+.card {
+	padding: 1.1rem 1.25rem;
+	border: 1px solid var(--navy-line);
+	border-top: 4px solid var(--navy);
+	border-radius: var(--radius);
+	background: var(--white);
+}
+.card > p:last-child { margin-bottom: 0; }
+
+/* Small line under the heading (role, venue, dates) */
+.meta { color: var(--navy-soft); font-size: .9rem; font-weight: 600; }
+
+/* Meta line with the Paper / Poster badges to its right */
+.meta-row { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem .75rem; margin-bottom: .6rem; }
+.meta-row .meta { margin: 0; }
+
+/* Arrow after a card's link; the second declaration marks it decorative for screen readers where supported */
+.card > a::after { content: " \2192"; content: " \2192" / ""; }
