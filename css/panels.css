@@ -1,0 +1,12 @@
+/* The page area under the top bar, and the tab panels inside it. */
+
+main { max-width: 1050px; margin: 0 auto; padding: 1.75rem 2rem 2rem; }
+
+.panel[hidden] { display: none; }
+.panel:focus-visible { outline-offset: 6px; border-radius: 6px; }
+
+.lead { font-size: 1.05rem; }   /* intro sentence under a panel heading */
+
+@media (max-width: 760px) {
+	main { padding: 1.25rem 1rem 1.5rem; }
+}

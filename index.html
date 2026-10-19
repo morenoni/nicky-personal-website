@@ -8,20 +8,44 @@
 	<link rel="stylesheet" href="css/theme.css">
 	<link rel="stylesheet" href="css/base.css">
 	<link rel="stylesheet" href="css/topbar.css">
+	<link rel="stylesheet" href="css/tabs.css">
+	<link rel="stylesheet" href="css/panels.css">
+	<script type="module" src="js/main.js"></script>
 </head>
 <body>
+
+	<!-- Icons are defined once here and reused with <use href="#id">. They are decorative only. -->
+	<svg class="sprite" aria-hidden="true" focusable="false">
+		<symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z"/></symbol>
+	</svg>
 
 	<!-- Lets keyboard users jump past the top bar -->
 	<a class="skip-link" href="#main">Skip to main content</a>
 
-	<!-- Top bar: site name (the tab navigation is added next) -->
+	<!-- Top bar: site name and tab navigation -->
 	<header class="topbar">
 		<a class="brand" href="#about">Nicole (Nicky) Moreno Gonzalez</a>
+
+		<!-- Menu button: only shown when the tabs do not fit on one line (see js/menu.js) -->
+		<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="tabs" aria-label="Menu">
+			<svg class="icon" aria-hidden="true" focusable="false"><use href="#i-menu"/></svg>
+		</button>
+
+		<nav aria-label="Main">
+			<div class="tabs" id="tabs" role="tablist" aria-label="Site sections">
+				<button type="button" role="tab" id="tab-about" aria-controls="about" aria-selected="true">About</button>
+			</div>
+		</nav>
 	</header>
 
 	<main id="main" tabindex="-1">
 		<!-- One page-level heading for screen readers; each tab below starts with an h2 -->
 		<h1 class="sr-only">Nicole (Nicky) Moreno Gonzalez</h1>
+
+		<!-- ABOUT -->
+		<section class="panel" id="about" role="tabpanel" aria-labelledby="tab-about" tabindex="0">
+			<h2 class="greeting">Hi, I'm Nicky! <span aria-hidden="true">👋</span></h2>
+		</section>
 	</main>
 
 </body>
