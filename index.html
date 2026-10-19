@@ -45,6 +45,7 @@
 			<div class="tabs" id="tabs" role="tablist" aria-label="Site sections">
 				<button type="button" role="tab" id="tab-about" aria-controls="about" aria-selected="true">About</button>
 				<button type="button" role="tab" id="tab-research" aria-controls="research" aria-selected="false" tabindex="-1">Research</button>
+				<button type="button" role="tab" id="tab-experience" aria-controls="experience" aria-selected="false" tabindex="-1">Experience</button>
 			</div>
 		</nav>
 	</header>
@@ -99,6 +100,12 @@
 			<h2>Research</h2>
 			<p class="lead">I work on making programming tools and learning experiences accessible from the start, especially for blind, low-vision, and neurodiverse students. Three papers from the Glimmer Lab appeared at SIGCSE TS 2026.</p>
 			<div class="cards" data-cards="research"></div>
+		</section>
+
+		<!-- EXPERIENCE: the cards come from js/data/experience.js -->
+		<section class="panel" id="experience" role="tabpanel" aria-labelledby="tab-experience" tabindex="0" hidden>
+			<h2>Experience</h2>
+			<div class="cards" data-cards="experience"></div>
 		</section>
 	</main>
 
