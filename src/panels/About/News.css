@@ -10,7 +10,7 @@
 .news-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
 .news-head h2 { font-size: 1.2rem; margin-bottom: .5rem; }
 
-/* "Scroll for more" hint, only shown while older items are hidden below (js/news.js) */
+/* "Scroll for more" hint, only shown while older items are hidden below (see hooks/useScrollHint.js) */
 .news-hint { margin: 0; color: var(--navy-soft); font-size: .85rem; font-weight: 600; }
 .news:not(.has-more) .news-hint { visibility: hidden; }
 

@@ -1,4 +1,4 @@
-/* The small "Paper" and "Poster" badges on cards (built in js/cards.js). */
+/* The small "Paper" and "Poster" badges on cards (drawn by Badges.jsx). */
 
 .badges { display: flex; flex-wrap: wrap; gap: .4rem; list-style: none; margin: 0; padding: 0; }
 
