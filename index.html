@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="css/panels.css">
 	<link rel="stylesheet" href="css/about.css">
 	<link rel="stylesheet" href="css/education.css">
+	<link rel="stylesheet" href="css/news.css">
 	<script type="module" src="js/main.js"></script>
 </head>
 <body>
@@ -74,6 +75,17 @@
 				<p><strong>Grinnell College</strong>, Grinnell, Iowa<br>
 				B.A. in Computer Science, minor in Statistics &middot; Expected May 2027</p>
 				<p>Leadership: Ladies in Education Society, CS Student Educational Policy Committee</p>
+			</div>
+
+			<!-- News: the items come from js/data/news.js. The scroll area is a focusable, labeled region so keyboard users can scroll it. -->
+			<div class="news">
+				<div class="news-head">
+					<h2 id="news-title">News</h2>
+					<p class="news-hint" aria-hidden="true">Scroll for more &darr;</p>
+				</div>
+				<div class="news-scroll" role="region" aria-labelledby="news-title" tabindex="0">
+					<ul id="news-list"></ul>
+				</div>
 			</div>
 		</section>
 	</main>

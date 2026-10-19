@@ -1,0 +1,55 @@
+/* News box on the About tab: a fixed-height box that scrolls, with cues that more is hidden. */
+
+.news {
+	margin-top: 1.75rem;
+	padding: 1rem 1.25rem;
+	background: var(--navy-tint);
+	border-radius: var(--radius);
+}
+
+.news-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
+.news-head h2 { font-size: 1.2rem; margin-bottom: .5rem; }
+
+/* "Scroll for more" hint, only shown while older items are hidden below (js/news.js) */
+.news-hint { margin: 0; color: var(--navy-soft); font-size: .85rem; font-weight: 600; }
+.news:not(.has-more) .news-hint { visibility: hidden; }
+
+/* The scrolling area: always-visible scrollbar, plus soft shadows and fades at the edges that still hide content */
+.news-scroll {
+	max-height: 9.5rem;
+	overflow-y: scroll;
+	padding-right: .5rem;
+	background:
+		linear-gradient(var(--navy-tint) 30%, transparent) center top,
+		linear-gradient(transparent, var(--navy-tint) 70%) center bottom,
+		radial-gradient(farthest-side at 50% 0, color-mix(in srgb, var(--navy) 30%, transparent), transparent) center top,
+		radial-gradient(farthest-side at 50% 100%, color-mix(in srgb, var(--navy) 30%, transparent), transparent) center bottom;
+	background-repeat: no-repeat;
+	background-size: 100% 2.2rem, 100% 2.2rem, 100% .8rem, 100% .8rem;
+	background-attachment: local, local, scroll, scroll;
+}
+.news-scroll:focus-visible { outline-offset: 4px; border-radius: 6px; }
+
+/* Firefox uses the standard properties; Chrome and Safari use the webkit rules (which keep the bar always visible) */
+@supports not selector(::-webkit-scrollbar) {
+	.news-scroll { scrollbar-width: thin; scrollbar-color: var(--navy-soft) var(--navy-line); }
+}
+.news-scroll::-webkit-scrollbar { width: .7rem; }
+.news-scroll::-webkit-scrollbar-track { background: var(--navy-line); border-radius: 999px; }
+.news-scroll::-webkit-scrollbar-thumb { background: var(--navy-soft); border-radius: 999px; }
+
+.news ul { list-style: none; margin: 0; padding: 0; }
+.news li {
+	display: grid;
+	grid-template-columns: 7rem 1fr;
+	gap: .75rem;
+	padding: .35rem 0;
+	border-top: 1px solid var(--navy-line);
+}
+.news li:first-child { border-top: 0; }
+.date { font-weight: 700; color: var(--navy); }
+
+/* Narrow screens: the date sits above its text */
+@media (max-width: 760px) {
+	.news li { grid-template-columns: 1fr; gap: 0; }
+}
