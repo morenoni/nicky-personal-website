@@ -6,5 +6,6 @@ Thumbs.db
 .vscode/
 .idea/
 
-# Dependencies, if any are ever added
+# Dependencies and build output
 node_modules/
+dist/
