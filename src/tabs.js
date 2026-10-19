@@ -2,7 +2,9 @@
 // a label for the tab bar, and the component that shows its content.
 
 import About from './panels/About/About.jsx';
+import Research from './panels/Research.jsx';
 
 export const TABS = [
 	{ id: 'about', label: 'About', Panel: About },
+	{ id: 'research', label: 'Research', Panel: Research },
 ];
