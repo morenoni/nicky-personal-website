@@ -54,16 +54,18 @@
 .menu-toggle:focus-visible { outline-color: var(--white); }
 
 /* ---------- Collapsed bar ----------
-   TopBar.jsx adds .compact whenever the tabs do not fit on one line. */
+   TopBar.jsx adds .compact whenever the tabs do not fit on one line.
+   These rules reach the real bar only (> and nav), never the invisible ruler below,
+   because the ruler must always measure the full-size bar. */
 
 .topbar.compact { padding: .75rem 3.25rem; justify-content: center; text-align: center; }
-.topbar.compact .brand { font-size: 1rem; }
-.topbar.compact .menu-toggle { display: block; position: absolute; top: .55rem; right: .6rem; }
-.topbar.compact nav { display: none; width: 100%; }
-.topbar.compact.menu-open nav { display: block; }
-.topbar.compact .tabs { flex-direction: column; gap: 0; border-top: 1px solid var(--on-navy-border); }
-.topbar.compact .tabs button { text-align: center; padding: .7rem .9rem; border-bottom: 1px solid var(--on-navy-divider); }
-.topbar.compact .tabs button[aria-selected="true"] { background: var(--on-navy-active); }
+.topbar.compact > .brand { font-size: 1rem; }
+.topbar.compact > .menu-toggle { display: block; position: absolute; top: .55rem; right: .6rem; }
+.topbar.compact > nav { display: none; width: 100%; }
+.topbar.compact.menu-open > nav { display: block; }
+.topbar.compact nav .tabs { flex-direction: column; gap: 0; border-top: 1px solid var(--on-navy-border); }
+.topbar.compact nav .tabs button { text-align: center; padding: .7rem .9rem; border-bottom: 1px solid var(--on-navy-divider); }
+.topbar.compact nav .tabs button[aria-selected="true"] { background: var(--on-navy-active); }
 
 /* ---------- Invisible ruler ----------
    An unseen, full-size copy of the bar that is never collapsed. useCompactBar measures it
