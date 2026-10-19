@@ -1,0 +1,18 @@
+/* Color palette and sizing tokens for the navy theme.
+   Change the look of the whole site here. */
+:root {
+	--navy:       #0b1f4b;
+	--navy-soft:  #24407a;
+	--navy-tint:  #eef2fa;
+	--navy-line:  #d3dcef;
+	--gray-tint:  #f1f2f4;
+	--text:       #1a2438;
+	--white:      #ffffff;
+	--radius:     14px;
+
+	/* White lines and highlights drawn on top of the navy top bar */
+	--on-navy-hover:   rgba(255, 255, 255, .5);
+	--on-navy-border:  rgba(255, 255, 255, .25);
+	--on-navy-divider: rgba(255, 255, 255, .15);
+	--on-navy-active:  rgba(255, 255, 255, .12);
+}
