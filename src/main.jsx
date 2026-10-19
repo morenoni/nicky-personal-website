@@ -6,6 +6,7 @@ import './styles/theme.css';
 import './styles/base.css';
 import './styles/layout.css';
 import App from './App.jsx';
+import './styles/contrast.css';   // last, so it can override the component styles
 
 createRoot(document.getElementById('root')).render(
 	<StrictMode>
