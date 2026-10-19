@@ -7,6 +7,7 @@ import { PROJECTS } from './data/projects.js';
 import { HONORS } from './data/honors.js';
 import { renderNews, watchNewsScroll } from './news.js';
 import { renderCards } from './cards.js';
+import { decorateExternalLinks } from './links.js';
 import { initMenu } from './menu.js';
 import { initTabs } from './tabs.js';
 
@@ -21,6 +22,7 @@ const CARD_LISTS = {
 renderNews(NEWS);
 document.querySelectorAll('[data-cards]').forEach(container =>
 	renderCards(container, CARD_LISTS[container.dataset.cards]));
+decorateExternalLinks();
 
 initMenu();
 initTabs();
