@@ -3,6 +3,7 @@
 import { NEWS } from './data/news.js';
 import { RESEARCH } from './data/research.js';
 import { EXPERIENCE } from './data/experience.js';
+import { PROJECTS } from './data/projects.js';
 import { renderNews, watchNewsScroll } from './news.js';
 import { renderCards } from './cards.js';
 import { initMenu } from './menu.js';
@@ -12,6 +13,7 @@ import { initTabs } from './tabs.js';
 const CARD_LISTS = {
 	research: RESEARCH,
 	experience: EXPERIENCE,
+	projects: PROJECTS,
 };
 
 renderNews(NEWS);

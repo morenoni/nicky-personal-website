@@ -46,6 +46,7 @@
 				<button type="button" role="tab" id="tab-about" aria-controls="about" aria-selected="true">About</button>
 				<button type="button" role="tab" id="tab-research" aria-controls="research" aria-selected="false" tabindex="-1">Research</button>
 				<button type="button" role="tab" id="tab-experience" aria-controls="experience" aria-selected="false" tabindex="-1">Experience</button>
+				<button type="button" role="tab" id="tab-projects" aria-controls="projects" aria-selected="false" tabindex="-1">Projects</button>
 			</div>
 		</nav>
 	</header>
@@ -106,6 +107,12 @@
 		<section class="panel" id="experience" role="tabpanel" aria-labelledby="tab-experience" tabindex="0" hidden>
 			<h2>Experience</h2>
 			<div class="cards" data-cards="experience"></div>
+		</section>
+
+		<!-- PROJECTS: the cards come from js/data/projects.js -->
+		<section class="panel" id="projects" role="tabpanel" aria-labelledby="tab-projects" tabindex="0" hidden>
+			<h2>Projects</h2>
+			<div class="cards" data-cards="projects"></div>
 		</section>
 	</main>
 
