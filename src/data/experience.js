@@ -1,5 +1,5 @@
 // Jobs shown on the Experience tab, ordered by end date with the newest first
-// (jobs you still have come first). See js/cards.js for what each field does.
+// (jobs you still have come first). See components/Card.jsx for what each field does.
 export const EXPERIENCE = [
 	{
 		title: 'DASIL Mentor',

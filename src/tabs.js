@@ -3,8 +3,10 @@
 
 import About from './panels/About/About.jsx';
 import Research from './panels/Research.jsx';
+import Experience from './panels/Experience.jsx';
 
 export const TABS = [
 	{ id: 'about', label: 'About', Panel: About },
 	{ id: 'research', label: 'Research', Panel: Research },
+	{ id: 'experience', label: 'Experience', Panel: Experience },
 ];
