@@ -1,4 +1,4 @@
-// The Research page: papers from data/research.js.
+// The Research tab: papers from data/research.js.
 
 import CardsPanel from './CardsPanel.jsx';
 import { RESEARCH } from '../data/research.js';

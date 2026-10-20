@@ -1,4 +1,4 @@
-// The Projects page: projects from data/projects.js.
+// The Projects tab: projects from data/projects.js.
 
 import CardsPanel from './CardsPanel.jsx';
 import { PROJECTS } from '../data/projects.js';

@@ -1,4 +1,4 @@
-/* Navy bar across the top: the site name, the links to each page, and the collapsed (menu button) layout. */
+/* Navy bar across the top: the site name, the tab bar, and the collapsed (menu button) layout. */
 
 .topbar,
 .topbar-ruler {
@@ -20,25 +20,25 @@
 }
 .brand:focus-visible { outline-color: var(--white); }
 
-/* ---------- Links to the pages ---------- */
+/* ---------- Tabs ---------- */
 
-.nav-links { display: flex; flex-wrap: nowrap; gap: .25rem; list-style: none; margin: 0; padding: 0; }
+.tabs { display: flex; flex-wrap: nowrap; gap: .25rem; }
 
-.nav-links a,
-.nav-ghost {
-	display: block;
+.tabs button,
+.tab-ghost {
+	font: inherit;
 	color: var(--white);
-	text-decoration: none;
+	background: transparent;
+	border: 0;
 	border-bottom: 3px solid transparent;
 	padding: .4rem .9rem;
 }
-.nav-links a:hover { border-bottom-color: var(--on-navy-hover); }
-.nav-links a:focus-visible { outline-color: var(--white); }
-
-/* The page you are on */
-.nav-links a[aria-current="page"],
-.nav-ghost.is-current { font-weight: 700; }
-.nav-links a[aria-current="page"] { border-bottom-color: var(--white); }
+.tabs button { cursor: pointer; }
+.tabs button:hover { border-bottom-color: var(--on-navy-hover); }
+.tabs button[aria-selected="true"],
+.tab-ghost.is-active { font-weight: 700; }
+.tabs button[aria-selected="true"] { border-bottom-color: var(--white); }
+.tabs button:focus-visible { outline-color: var(--white); }
 
 /* ---------- Menu button (only shown when the bar is collapsed) ---------- */
 
@@ -54,7 +54,7 @@
 .menu-toggle:focus-visible { outline-color: var(--white); }
 
 /* ---------- Collapsed bar ----------
-   TopBar.jsx adds .compact whenever the links do not fit on one line.
+   TopBar.jsx adds .compact whenever the tabs do not fit on one line.
    These rules reach the real bar only (> and nav), never the invisible ruler below,
    because the ruler must always measure the full-size bar. */
 
@@ -63,13 +63,13 @@
 .topbar.compact > .menu-toggle { display: block; position: absolute; top: .55rem; right: .6rem; }
 .topbar.compact > nav { display: none; width: 100%; }
 .topbar.compact.menu-open > nav { display: block; }
-.topbar.compact nav .nav-links { flex-direction: column; gap: 0; border-top: 1px solid var(--on-navy-border); }
-.topbar.compact nav .nav-links a { padding: .7rem .9rem; border-bottom: 1px solid var(--on-navy-divider); }
-.topbar.compact nav .nav-links a[aria-current="page"] { background: var(--on-navy-active); }
+.topbar.compact nav .tabs { flex-direction: column; gap: 0; border-top: 1px solid var(--on-navy-border); }
+.topbar.compact nav .tabs button { text-align: center; padding: .7rem .9rem; border-bottom: 1px solid var(--on-navy-divider); }
+.topbar.compact nav .tabs button[aria-selected="true"] { background: var(--on-navy-active); }
 
 /* ---------- Invisible ruler ----------
    An unseen, full-size copy of the bar that is never collapsed. useCompactBar measures it
-   to learn whether the links would fit on one line. */
+   to learn whether the tabs would fit on one line. */
 
 .topbar-ruler {
 	position: absolute;

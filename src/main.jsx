@@ -1,5 +1,4 @@
-// Entry point, shared by every page. Each HTML file names its page in data-page
-// (for example data-page="research"), and the app shows that page.
+// Entry point: loads the global styles and mounts the React app into the page.
 
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
@@ -9,10 +8,8 @@ import './styles/layout.css';
 import App from './App.jsx';
 import './styles/contrast.css';   // last, so it can override the component styles
 
-const root = document.getElementById('root');
-
-createRoot(root).render(
+createRoot(document.getElementById('root')).render(
 	<StrictMode>
-		<App pageId={root.dataset.page} />
+		<App />
 	</StrictMode>,
 );

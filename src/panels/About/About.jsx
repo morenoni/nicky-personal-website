@@ -1,4 +1,4 @@
-// The About page: photo beside the bio, then the Education box and the News box.
+// The About tab: photo beside the bio, then the Education box and the News box.
 
 import Bio from './Bio.jsx';
 import Education from './Education.jsx';
