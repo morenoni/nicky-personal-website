@@ -3,7 +3,6 @@ export const PROJECTS = [
 	{
 		title: 'Scamper IDE Accessibility',
 		meta: 'Glimmer Research Lab',
-		formats: ['paper', 'poster'],
 		summary: 'A screen reader- and keyboard-accessible Abstract Syntax Tree for a web-based Scheme IDE, built with ARIA, keyboard-navigation audits, and CodeMirror auto-indentation.',
 		link: { href: 'https://github.com/jakerss2/scamperAccessibility.git', label: 'View the code' },
 	},
