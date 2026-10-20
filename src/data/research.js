@@ -1,6 +1,13 @@
 // Papers shown on the Research tab. See components/Card.jsx for what each field does.
 export const RESEARCH = [
 	{
+		title: 'Enhancing Accessibility of a Web-based Scheme IDE to Improve Inclusion in Computing',
+		meta: 'First author · TAPIA 2026',
+		formats: ['paper', 'poster'],
+		summary: 'Making the Scamper IDE accessible to blind, low-vision, and neurodivergent learners.',
+		link: { href: './papers/tapia-2026.pdf', label: 'Read the paper' },
+	},
+	{
 		title: 'Visualizing and Sonifying Abstract Syntax Trees for Accessibility',
 		meta: 'First author · SIGCSE TS 2026',
 		formats: ['paper', 'poster'],
