@@ -18,5 +18,8 @@
 .meta-row { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem .75rem; margin-bottom: .6rem; }
 .meta-row .meta { margin: 0; }
 
-/* Arrow after a card's link; the second declaration marks it decorative for screen readers where supported */
-.card > a::after { content: " \2192"; content: " \2192" / ""; }
+/* The card's links ("Read the paper", "See the Poster") side by side; they wrap on narrow screens */
+.card-links { display: flex; flex-wrap: wrap; gap: .25rem 1.5rem; }
+
+/* Arrow after each link; the second declaration marks it decorative for screen readers where supported */
+.card-links a::after { content: " \2192"; content: " \2192" / ""; }

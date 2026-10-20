@@ -5,14 +5,14 @@
 //   meta     small line under the heading (role, venue, dates...)
 //   formats  badges next to the meta line: ['paper'], ['poster'] or ['paper', 'poster']
 //   summary  short description
-//   link     { href, label } for a "Read the paper" / "View the code" link
+//   links    [{ href, label }] shown side by side, left to right (see data/links.js)
 
 import Decorative from './Decorative.jsx';
 import ExternalLink from './ExternalLink.jsx';
 import Badges from './Badges.jsx';
 import './Card.css';
 
-export default function Card({ emoji, title, meta, formats, summary, link }) {
+export default function Card({ emoji, title, meta, formats, summary, links }) {
 	const metaLine = meta && <p className="meta">{meta}</p>;
 
 	return (
@@ -23,7 +23,13 @@ export default function Card({ emoji, title, meta, formats, summary, link }) {
 			</h3>
 			{formats ? <div className="meta-row">{metaLine}<Badges formats={formats} /></div> : metaLine}
 			{summary && <p>{summary}</p>}
-			{link && <ExternalLink href={link.href} context={title}>{link.label}</ExternalLink>}
+			{links && (
+				<div className="card-links">
+					{links.map(({ href, label }) => (
+						<ExternalLink key={label} href={href} context={title}>{label}</ExternalLink>
+					))}
+				</div>
+			)}
 		</article>
 	);
 }
