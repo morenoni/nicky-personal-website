@@ -21,7 +21,7 @@ export default function News() {
 			<div className="news-scroll" ref={scrollRef} role="region" aria-labelledby="news-title" tabIndex={0}>
 				<ul>
 					{NEWS.map(({ date, label, text }) => (
-						<li key={date}>
+						<li key={`${date} ${text}`}>
 							<time className="date" dateTime={date}>{label}</time>
 							<span>{text}</span>
 						</li>
