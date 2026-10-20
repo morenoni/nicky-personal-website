@@ -1,5 +1,5 @@
 // Projects shown on the Projects tab. See components/Card.jsx for what each field does.
-import { codeLink } from './links.js';
+import { codeLink, paperLink, posterLink } from './links.js';
 
 export const PROJECTS = [
 	{
@@ -13,6 +13,10 @@ export const PROJECTS = [
 		meta: 'Artificial Intelligence Course Project',
 		formats: ['paper', 'poster'],
 		summary: 'Extended Q-Learning, CK, CoLF, and CK-CoLF to a Webots intersection with three self-driving cars. Across 100 trials of 200,000 episodes, CK-CoLF best balanced convergence speed and cooperation.',
-		links: [codeLink('https://github.com/khanhdo05/mas-cooperation')],
+		links: [
+			codeLink('https://github.com/khanhdo05/mas-cooperation'),
+			paperLink('./papers/multi-agent-rl.pdf'),
+			posterLink('./posters/multi-agent-rl.pdf'),
+		],
 	},
 ];
