@@ -10,7 +10,7 @@ export const PROJECTS = [
 	},
 	{
 		title: 'Multi-Agent RL for Autonomous Driving',
-		meta: 'Artificial Intelligence Course Project',
+		meta: 'Artificial Intelligence Project',
 		formats: ['paper', 'poster'],
 		summary: 'Extended Q-Learning, CK, CoLF, and CK-CoLF to a Webots intersection with three self-driving cars. Across 100 trials of 200,000 episodes, CK-CoLF best balanced convergence speed and cooperation.',
 		links: [
