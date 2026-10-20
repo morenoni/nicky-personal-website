@@ -3,7 +3,7 @@
 //   emoji    decorative icon shown before the title
 //   title    card heading
 //   meta     small line under the heading (role, venue, dates...)
-//   formats  true to show the Paper and Poster badges next to the meta line
+//   formats  badges next to the meta line: ['paper'], ['poster'] or ['paper', 'poster']
 //   summary  short description
 //   link     { href, label } for a "Read the paper" / "View the code" link
 
@@ -21,7 +21,7 @@ export default function Card({ emoji, title, meta, formats, summary, link }) {
 				{emoji && <><Decorative>{emoji}</Decorative>{' '}</>}
 				{title}
 			</h3>
-			{formats ? <div className="meta-row">{metaLine}<Badges /></div> : metaLine}
+			{formats ? <div className="meta-row">{metaLine}<Badges formats={formats} /></div> : metaLine}
 			{summary && <p>{summary}</p>}
 			{link && <ExternalLink href={link.href} context={title}>{link.label}</ExternalLink>}
 		</article>
