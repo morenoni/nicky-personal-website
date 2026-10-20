@@ -1,4 +1,4 @@
-// The contact buttons on the About tab.
+// The contact buttons on the About page.
 //   label:        text on the button
 //   icon:         a name from icons.js
 //   external:     true opens the link in a new tab (email links stay in the mail app)

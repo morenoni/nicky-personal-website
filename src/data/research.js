@@ -1,4 +1,4 @@
-// Papers shown on the Research tab. See components/Card.jsx for what each field does.
+// Papers shown on the Research page. See components/Card.jsx for what each field does.
 export const RESEARCH = [
 	{
 		title: 'Visualizing and Sonifying Abstract Syntax Trees for Accessibility',

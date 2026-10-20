@@ -1,4 +1,4 @@
-// One card. It is used by the Research, Experience, Projects and Honors tabs.
+// One card. It is used by the Research, Experience, Projects and Honors pages.
 // Every field except `title` is optional:
 //   emoji    decorative icon shown before the title
 //   title    card heading

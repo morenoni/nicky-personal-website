@@ -1,4 +1,4 @@
-// The shared layout of a tab made of cards: a heading, an optional intro sentence, and the cards.
+// The shared layout of a page made of cards: a heading, an optional intro sentence, and the cards.
 
 import Card from '../components/Card.jsx';
 

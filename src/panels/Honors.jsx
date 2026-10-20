@@ -1,4 +1,4 @@
-// The Honors & Awards tab: awards from data/honors.js.
+// The Honors & Awards page: awards from data/honors.js.
 
 import CardsPanel from './CardsPanel.jsx';
 import { HONORS } from '../data/honors.js';

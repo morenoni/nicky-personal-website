@@ -1,4 +1,4 @@
-/* Stacked cards used by the Research, Experience, Projects and Honors tabs. */
+/* Stacked cards used by the Research, Experience, Projects and Honors pages. */
 
 .cards { display: flex; flex-direction: column; gap: 1rem; }
 

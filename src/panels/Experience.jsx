@@ -1,4 +1,4 @@
-// The Experience tab: jobs from data/experience.js, newest end date first.
+// The Experience page: jobs from data/experience.js, newest end date first.
 
 import CardsPanel from './CardsPanel.jsx';
 import { EXPERIENCE } from '../data/experience.js';

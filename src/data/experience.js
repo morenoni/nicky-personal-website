@@ -1,4 +1,4 @@
-// Jobs shown on the Experience tab, ordered by end date with the newest first
+// Jobs shown on the Experience page, ordered by end date with the newest first
 // (jobs you still have come first). See components/Card.jsx for what each field does.
 export const EXPERIENCE = [
 	{
