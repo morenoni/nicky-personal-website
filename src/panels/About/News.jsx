@@ -3,7 +3,6 @@
 // so keyboard users can reach and scroll it.
 
 import { useRef } from 'react';
-import Decorative from '../../components/Decorative.jsx';
 import useScrollHint from '../../hooks/useScrollHint.js';
 import { NEWS } from '../../data/news.js';
 import './News.css';
@@ -21,10 +20,10 @@ export default function News() {
 			</div>
 			<div className="news-scroll" ref={scrollRef} role="region" aria-labelledby="news-title" tabIndex={0}>
 				<ul>
-					{NEWS.map(({ date, label, emoji, text }) => (
+					{NEWS.map(({ date, label, text }) => (
 						<li key={date}>
 							<time className="date" dateTime={date}>{label}</time>
-							<span><Decorative>{emoji}</Decorative> {text}</span>
+							<span>{text}</span>
 						</li>
 					))}
 				</ul>
