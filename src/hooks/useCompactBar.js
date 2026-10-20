@@ -1,5 +1,5 @@
 // Decides whether the top bar should collapse into the menu button.
-// It collapses whenever the tabs do not fit on one line next to the site name,
+// It collapses whenever the page links do not fit on one line next to the site name,
 // and always on phone-sized screens, where the page layout is stacked anyway.
 
 import { useLayoutEffect, useState } from 'react';
@@ -16,9 +16,9 @@ export default function useCompactBar(barRef) {
 		// Measures the invisible, uncollapsed copy of the bar (see TopBar.css)
 		const update = () => {
 			const ruler = bar.querySelector('.topbar-ruler');
-			const tabs = ruler.querySelector('.tabs');
-			const wrapped = tabs.offsetTop > ruler.querySelector('.brand').offsetTop + 8;
-			const overflowing = tabs.scrollWidth > tabs.clientWidth;
+			const links = ruler.querySelector('.nav-links');
+			const wrapped = links.offsetTop > ruler.querySelector('.brand').offsetTop + 8;
+			const overflowing = links.scrollWidth > links.clientWidth;
 			setCompact(phone.matches || wrapped || overflowing);
 		};
 

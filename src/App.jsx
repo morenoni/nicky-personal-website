@@ -1,27 +1,21 @@
-// The whole site: skip link, top bar with tabs, and one panel per tab.
+// One page of the site: skip link, top bar with the menu, and the content of the current page.
 
 import SkipLink from './components/SkipLink.jsx';
 import TopBar from './components/TopBar.jsx';
-import TabPanel from './components/TabPanel.jsx';
-import useActiveTab from './hooks/useActiveTab.js';
-import { TABS } from './tabs.js';
+import { PAGES } from './pages.js';
 import { SITE_NAME } from './site.js';
 
-export default function App() {
-	const [activeId, setActiveId] = useActiveTab(TABS);
+export default function App({ pageId }) {
+	const page = PAGES.find(({ id }) => id === pageId) ?? PAGES[0];
 
 	return (
 		<>
 			<SkipLink />
-			<TopBar tabs={TABS} activeId={activeId} onSelect={setActiveId} />
+			<TopBar pages={PAGES} currentId={page.id} />
 			<main id="main" tabIndex={-1}>
-				{/* One page-level heading for screen readers; each tab starts with an h2 */}
+				{/* One page-level heading for screen readers; each page starts with an h2 */}
 				<h1 className="sr-only">{SITE_NAME}</h1>
-				{TABS.map(({ id, Panel }) => (
-					<TabPanel key={id} id={id} active={id === activeId}>
-						<Panel />
-					</TabPanel>
-				))}
+				<page.Panel />
 			</main>
 		</>
 	);

@@ -1,8 +1,8 @@
 /* Windows High Contrast / forced-colors mode: the system picks the colors,
-   so keep the selected tab and the box outlines visible. */
+   so keep the current page's link and the box outlines visible. */
 
 @media (forced-colors: active) {
-	.tabs button[aria-selected="true"] { border-bottom-color: Highlight; }
+	.nav-links a[aria-current="page"] { border-bottom-color: Highlight; }
 	.pill, .badge { border: 1px solid ButtonText; }
 	.card, .news, .education { border: 1px solid CanvasText; }
 }
