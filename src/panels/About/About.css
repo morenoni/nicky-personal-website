@@ -1,4 +1,4 @@
-/* About tab: photo beside the bio, and the Email / LinkedIn / GitHub buttons. */
+/* About tab: photo beside the bio, and the contact buttons (Email, LinkedIn, GitHub, Google Scholar). */
 
 .about-grid {
 	display: grid;
@@ -14,8 +14,11 @@
 	border: 4px solid var(--navy-tint);
 }
 
-/* The three buttons always stay on one line */
-.links { display: flex; flex-wrap: nowrap; gap: .5rem; margin: 0; }
+/* The bio column is measured by the container query below, to decide how the buttons are laid out */
+.bio { container-type: inline-size; }
+
+/* The four buttons sit on one line when there is room */
+.links { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0; }
 
 .pill {
 	display: inline-flex;
@@ -31,14 +34,21 @@
 .pill:hover { background: var(--navy-soft); }
 .pill .icon { width: 1.1rem; height: 1.1rem; }
 
+/* Four buttons need about 500px for one line. When the bio column is narrower than that,
+   show them as two rows of two, with matching widths, instead of three and one. */
+@container (max-width: 510px) {
+	.links { display: grid; grid-template-columns: repeat(2, 1fr); width: max-content; max-width: 100%; }
+	.links .pill { justify-content: center; }
+}
+
 /* Narrow screens: the bio drops below the photo, and the photo and buttons are centered */
 @media (max-width: 760px) {
 	.about-grid { grid-template-columns: 1fr; }
 	.portrait { max-width: 360px; margin: 0 auto; }
-	.links { justify-content: center; }
+	.links { justify-content: center; margin-inline: auto; }
 }
 
-/* Very small phones: shrink the buttons so all three still fit on one line */
+/* Very small phones: smaller buttons, so the two columns stay narrow */
 @media (max-width: 400px) {
 	.links { gap: .35rem; }
 	.pill { gap: .3rem; padding: .3rem .65rem; font-size: .85rem; }
