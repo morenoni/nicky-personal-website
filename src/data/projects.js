@@ -1,13 +1,7 @@
-// Projects shown on the Projects tab. See components/Card.jsx for what each field does.
+// Projects shown on the Projects tab, in the order they appear. See components/Card.jsx for what each field does.
 import { codeLink, paperLink, posterLink } from './links.js';
 
 export const PROJECTS = [
-	{
-		title: 'Scamper IDE Accessibility',
-		meta: 'Glimmer Research Lab',
-		summary: 'A screen reader- and keyboard-accessible Abstract Syntax Tree for a web-based Scheme IDE, built with ARIA, keyboard-navigation audits, and CodeMirror auto-indentation.',
-		links: [codeLink('https://github.com/jakerss2/scamperAccessibility.git')],
-	},
 	{
 		title: 'Multi-Agent RL for Autonomous Driving',
 		meta: 'Artificial Intelligence Project',
@@ -18,5 +12,11 @@ export const PROJECTS = [
 			paperLink('./papers/multi-agent-rl.pdf'),
 			posterLink('./posters/multi-agent-rl.pdf'),
 		],
+	},
+	{
+		title: 'Scamper IDE Accessibility',
+		meta: 'Glimmer Research Lab',
+		summary: 'A screen reader- and keyboard-accessible Abstract Syntax Tree for a web-based Scheme IDE, built with ARIA, keyboard-navigation audits, and CodeMirror auto-indentation.',
+		links: [codeLink('https://github.com/jakerss2/scamperAccessibility.git')],
 	},
 ];
