@@ -3,6 +3,12 @@ import { codeLink, paperLink, posterLink } from './links.js';
 
 export const PROJECTS = [
 	{
+		title: 'UniCab',
+		meta: 'CSC 324 Project',
+		summary: 'A rideshare iOS app where drivers post rides and riders request seats, built with Swift and Supabase.',
+		status: 'In Progress...',
+	},
+	{
 		title: 'Multi-Agent RL for Autonomous Driving',
 		meta: 'Artificial Intelligence Project',
 		formats: ['paper', 'poster'],
