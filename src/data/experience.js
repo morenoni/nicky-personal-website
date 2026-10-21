@@ -4,26 +4,56 @@ export const EXPERIENCE = [
 	{
 		title: 'DASIL Mentor',
 		meta: 'Grinnell College · Jan 2026 – Present',
-		summary: 'Help 20+ students a week with R, Python, and STATA, and am translating time-series coursework from STATA to R.',
+		summary: 'Mentor 20+ students a week in R, Python, and STATA, and reimplemented faculty time-series coursework from STATA in R.',
 	},
 	{
 		title: 'IT Service Desk Technical Assistant',
 		meta: 'Grinnell College · Aug 2025 – Present',
-		summary: 'Resolve 20+ ServiceNow tickets a day covering hardware, software, accounts, and networks for students, faculty, and staff.',
+		summary: 'Support 20+ daily ServiceNow requests and manage account access, authentication, and equipment checkout.',
 	},
 	{
 		title: 'Technology Support Center Intern',
-		meta: 'LCS Corporation · Summer 2026',
-		summary: 'Built 6+ SQL-based BMC Helix dashboards used by 4+ teams supporting 30+ senior living communities, and automated recurring tasks and reports, saving an estimated 42+ hours a year.',
+		meta: 'LCS Corporation · May 2026 – Jul 2026',
+		summary: 'Built 6+ BMC Helix dashboards for 4+ teams and automated recurring tasks and reports, saving an estimated 42+ hours a year.',
 	},
 	{
 		title: 'Computer Science Teaching Assistant',
-		meta: 'Grinnell College · Spring 2026',
-		summary: 'Mentored 60+ students in C and problem solving through weekly help sessions on debugging, Git, and fundamentals.',
+		meta: 'Grinnell College · Feb 2026 – May 2026',
+		summary: 'Mentored 60+ students in C programming through weekly help sessions on debugging, Git, and problem solving.',
 	},
 	{
-		title: 'Research & Development Intern',
-		meta: 'Glimmer Research Lab, Grinnell · May 2025 – Feb 2026',
-		summary: 'Made the Scamper IDE usable with screen readers and keyboards for 100+ intro CS students, including blind and low-vision users, following WCAG 2.1 and testing with assistive tech.',
+		title: 'Software Engineer, Programming Languages',
+		meta: 'Scamper Development Team, Grinnell College · Feb 2026 – May 2026',
+		summary: "Helped maintain Scamper's language and web IDE, used by 100+ students a year, and fixed dependency, ESLint, and build issues.",
+	},
+	{
+		title: 'Undergraduate Researcher',
+		meta: 'Glimmer Research Lab, Grinnell College · May 2025 – Feb 2026',
+		summary: 'Made the Scamper IDE usable with screen readers and keyboards for 100+ students, following WCAG 2.1 and testing with assistive tech.',
+	},
+	{
+		title: 'Calculus and Statistics Tutor',
+		meta: 'Grinnell College · Aug 2025 – Dec 2025',
+		summary: 'Helped 10+ students a week with calculus and applied statistics.',
+	},
+	{
+		title: 'Computer Science Evening Tutor',
+		meta: 'Grinnell College · Aug 2025 – Dec 2025',
+		summary: 'Tutored 20+ students a week in Scheme, C, and Java with personalized teaching strategies.',
+	},
+	{
+		title: 'Elementary School Teacher Assistant',
+		meta: 'Grinnell, Iowa · Feb 2024 – Oct 2025',
+		summary: 'Taught geometry to 20+ young girls and introduced programming by building robots with block code.',
+	},
+	{
+		title: 'Applied Statistics Teaching Assistant',
+		meta: 'Grinnell College · Jan 2025 – May 2025',
+		summary: 'Mentored 20+ students a week in R for applied statistics.',
+	},
+	{
+		title: 'Computer Science Department Grader',
+		meta: 'Grinnell College · Aug 2024 – May 2025',
+		summary: 'Graded coursework for 100+ students in CSC 151 and CSC 207.',
 	},
 ];
