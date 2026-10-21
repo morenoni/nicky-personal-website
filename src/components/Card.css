@@ -23,3 +23,6 @@
 
 /* Arrow after each link; the second declaration marks it decorative for screen readers where supported */
 .card-links a::after { content: " \2192"; content: " \2192" / ""; }
+
+/* Status text where the links would be, such as "In Progress..." (not a link, so no underline or arrow) */
+.card-status { color: var(--navy-soft); font-style: italic; font-weight: 600; }

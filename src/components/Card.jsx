@@ -5,12 +5,13 @@
 //   formats  badges next to the meta line: ['paper'], ['poster'] or ['paper', 'poster']
 //   summary  short description
 //   links    [{ href, label }] shown side by side, left to right (see data/links.js)
+//   status   plain text shown where the links go, for work with nothing to link to yet ("In Progress...")
 
 import ExternalLink from './ExternalLink.jsx';
 import Badges from './Badges.jsx';
 import './Card.css';
 
-export default function Card({ title, meta, formats, summary, links }) {
+export default function Card({ title, meta, formats, summary, links, status }) {
 	const metaLine = meta && <p className="meta">{meta}</p>;
 
 	return (
@@ -25,6 +26,7 @@ export default function Card({ title, meta, formats, summary, links }) {
 					))}
 				</div>
 			)}
+			{status && <p className="card-status">{status}</p>}
 		</article>
 	);
 }
