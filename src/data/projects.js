@@ -19,4 +19,16 @@ export const PROJECTS = [
 		summary: 'A screen reader- and keyboard-accessible Abstract Syntax Tree for a web-based Scheme IDE, built with ARIA, keyboard-navigation audits, and CodeMirror auto-indentation.',
 		links: [codeLink('https://github.com/jakerss2/scamperAccessibility.git')],
 	},
+	{
+		title: 'NBA Stats Comparison App',
+		meta: 'STA 230 Project',
+		summary: "An interactive R Shiny app for comparing NBA players' shot attempts, shooting accuracy, season totals, and progression over ten seasons.",
+		links: [codeLink('https://github.com/morenoni/NBA-stats-comparatives-W-RShiny')],
+	},
+	{
+		title: 'Bit Trees and Braille',
+		meta: 'CSC 207 Project',
+		summary: 'A Java command-line tool that uses bit trees to translate between braille, ASCII, and Unicode.',
+		links: [codeLink('https://github.com/morenoni/mp-bit-trees-maven')],
+	},
 ];
